@@ -1,5 +1,5 @@
 # Git
-Useful links and documents got Git
+Useful links and documents for Git
 
 #### Git Articles
 
