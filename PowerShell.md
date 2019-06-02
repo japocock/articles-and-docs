@@ -7,7 +7,7 @@ Useful links and documents
 
 #### AWS PowerShell Commands
 
-Get S3 objects from a given bucket with a certain storag class.
+Get S3 objects from a given bucket with a given storage class.
 
 ```sh
 Get-S3Object -BucketName <bucketname> -ProfileName <ProfileName> -Region <Region>  | Where-Object {$_.StorageClass -eq "GLACIER"}
