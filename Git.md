@@ -5,7 +5,28 @@ Useful links and documents for Git
 
 [Online Markdown Editor - Dillinger](https://dillinger.io/)
 
-#### Git Commands
+
+#### Git Repo Commands
+
+Add Origin/remote repo for local project.
+
+```sh
+ git remote add origin https://XXX
+```
+
+Push to remote repository (empty)
+
+```sh
+git push -u origin --all
+```
+
+Push to remote repository (force)
+
+```sh
+git push -f origin --all
+```
+
+#### Other Git Commands
 
 Change editor to Notepad++ on Windows
 
