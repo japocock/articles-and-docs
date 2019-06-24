@@ -1,6 +1,8 @@
 # Git
 Useful links and documents for Git
 
+![alt text](https://imgs.xkcd.com/comics/git.png)
+
 #### Git Articles
 
 [Online Markdown Editor - Dillinger](https://dillinger.io/)
