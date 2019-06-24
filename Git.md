@@ -5,8 +5,21 @@ Useful links and documents for Git
 
 [Online Markdown Editor - Dillinger](https://dillinger.io/)
 
+[Git Cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 
 #### Git Repo Commands
+
+Get status of local repo
+
+```sh
+git status
+```
+
+Check remote repo details
+
+```sh
+git remote -v
+```
 
 Add Origin/remote repo for local project.
 
