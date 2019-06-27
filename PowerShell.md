@@ -5,6 +5,8 @@ Useful links and documents
 
 [Understanding the Six PowerShell Profiles](https://devblogs.microsoft.com/scripting/understanding-the-six-powershell-profiles/)
 
+[Richard Siddaway's Blog](https://richardspowershellblog.wordpress.com/)
+
 #### AWS PowerShell Commands
 
 Get S3 objects from a given bucket with a given storage class.
