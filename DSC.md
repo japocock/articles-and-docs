@@ -8,6 +8,10 @@ Useful links and documents
 
 [Credentials Options in Configuration Data](https://docs.microsoft.com/en-us/powershell/dsc/configurations/configdatacredentials)
 
+[Documentation](https://docs.microsoft.com/en-us/powershell/dsc/overview/overview)
+
+#### Code
+
 Get resource syntax
 
 ```sh
