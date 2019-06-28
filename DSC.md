@@ -5,6 +5,7 @@ Useful links and documents
 #### DSC
 
 [Idempotency For Dummies](https://medium.com/@ahmadfarag/idempotency-764f7bb6e4e2)
+
 [Credentials Options in Configuration Data](https://docs.microsoft.com/en-us/powershell/dsc/configurations/configdatacredentials)
 Get resource syntax
 
