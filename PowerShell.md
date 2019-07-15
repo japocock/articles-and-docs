@@ -2,8 +2,9 @@
 Useful links and documents
 
 #### PowerShell Search
-
+```sh
 Get-ChildItem -recurse | Select-String -pattern "foo" | where-object {$_.path -like '*.txt*'} | group path | select name
+```
 
 #### PowerShell Articles
 
