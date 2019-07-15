@@ -1,7 +1,7 @@
 # NodeJS
 Useful links and documents
 
-#### Methods for updating packages
+#### Updating Packages
 ```sh
 npm install -g npm-check-updates
 npm i -g npm-check
