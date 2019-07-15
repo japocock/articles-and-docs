@@ -1,6 +1,10 @@
 # PowerShell
 Useful links and documents
 
+#### PowerShell Search
+
+Get-ChildItem -recurse | Select-String -pattern "foo" | where-object {$_.path -like '*.txt*'} | group path | select name
+
 #### PowerShell Articles
 
 [Understanding the Six PowerShell Profiles](https://devblogs.microsoft.com/scripting/understanding-the-six-powershell-profiles/)
