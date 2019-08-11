@@ -28,6 +28,12 @@ Get-S3Object -BucketName <bucketname> -ProfileName <ProfileName> -Region <Region
 
 [Test-ComputerSecureChannel -Repair -Verbose](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/test-computersecurechannel?view=powershell-5.1)
 
+```sh
+$objSID = New-Object System.Security.Principal.SecurityIdentifier ("xxxxxxxxx")
+$objUser = $objSID.Translate( [System.Security.Principal.NTAccount])
+$objUser.Value 
+```
+
 #### Windows Feature PowerShell Commands
 
 Install .NET
