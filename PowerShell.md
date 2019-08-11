@@ -26,7 +26,9 @@ Get-S3Object -BucketName <bucketname> -ProfileName <ProfileName> -Region <Region
 
 #### AD PowerShell Commands
 
-[Test-ComputerSecureChannel -Repair -Verbose](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/test-computersecurechannel?view=powershell-5.1)
+```sh
+Test-ComputerSecureChannel -Repair -Verbose
+```
 
 ```sh
 $objSID = New-Object System.Security.Principal.SecurityIdentifier ("xxxxxxxxx")
