@@ -27,13 +27,30 @@ Get-S3Object -BucketName <bucketname> -ProfileName <ProfileName> -Region <Region
 #### AD PowerShell Commands
 
 ```sh
+#Test/repair a computers secure channel with AD
 Test-ComputerSecureChannel -Repair -Verbose
 ```
 
 ```sh
+#SID > GroupName
 $objSID = New-Object System.Security.Principal.SecurityIdentifier ("xxxxxxxxx")
 $objUser = $objSID.Translate( [System.Security.Principal.NTAccount])
 $objUser.Value 
+```
+```sh
+#Get Members of AD Groups (possible filter examples)
+
+get-adgroup -Properties *  -Filter "name -like 'Acme*' -and GroupCategory -eq 'Security' -and Managedby -eq 'CN=Simpson\, HOMER,OU=SPRINGFIELD,DC=EARTH,DC=net'" -SearchBase "DC=EARTH,DC=net" -PipelineVariable group  | 
+Get-AdgroupMember -PipelineVariable member | ForEach-Object {
+    New-Object psobject -Property @{
+        Group = $group.Name
+        "Group DN" = $group.Distinguishedname
+        "Group SamAccountName" = $group.SamAccountName
+        "Member DN" = $member.DistinguishedName
+        "Member Name" = $member.Name
+        "Member SamAccountName" = $member.SamAccountName
+    }
+} | Export-CSV C:\TEMP\Acme_Groups_Groups_Managed_By_Homer_Simpson.csv -Append -NoTypeInformation -ErrorAction Inquire
 ```
 
 #### Windows Feature PowerShell Commands
