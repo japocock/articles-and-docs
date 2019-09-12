@@ -13,3 +13,5 @@
 [What are Microservices?](https://docs.microsoft.com/en-us/azure/devops/learn/what-are-microservices)
 
 [What is Monitoring?](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-monitoring)
+
+[Continuous integration vs. continuous delivery vs. continuous deployment](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
