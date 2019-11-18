@@ -1,5 +1,6 @@
 Dates
 
+```sh
 // create date time 2012-03-29 16:05:07.123
 DateTime dt = new DateTime(2012, 3, 29, 16, 5, 7, 123);
 
@@ -25,3 +26,4 @@ String.Format("{0:dddd, MMMM d, yyyy}", dt);  // "Sunday, March 9, 2008"
 // two/four digit year
 String.Format("{0:MM/dd/yy}", dt);            // "03/09/08"
 String.Format("{0:MM/dd/yyyy}", dt);          // "03/09/2008"
+```
