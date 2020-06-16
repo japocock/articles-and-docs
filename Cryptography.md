@@ -1,4 +1,4 @@
-# Encrypion
+# Cryptography
 
 #### SHA
 
