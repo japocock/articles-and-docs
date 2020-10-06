@@ -7,6 +7,11 @@ Useful links and documents
 
 [Well-known security identifiers in Windows operating systems](https://support.microsoft.com/en-gb/help/243330/well-known-security-identifiers-in-windows-operating-systems)
 
+[Troubleshoot port exhaustion issues](https://docs.microsoft.com/en-us/windows/client-management/troubleshoot-tcpip-port-exhaust)
+
+```sh
+netsh int ipv4 show dynamicport tcp
+```
 
 #### AD Computer Commands
 
