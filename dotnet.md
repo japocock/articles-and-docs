@@ -1,4 +1,4 @@
-Dates
+#### Dates
 
 ```sh
 // create date time 2012-03-29 16:05:07.123
@@ -27,3 +27,7 @@ String.Format("{0:dddd, MMMM d, yyyy}", dt);  // "Sunday, March 9, 2008"
 String.Format("{0:MM/dd/yy}", dt);            // "03/09/08"
 String.Format("{0:MM/dd/yyyy}", dt);          // "03/09/2008"
 ```
+
+#### SSL Labs
+
+[C# Ignore SSL Errors](https://stackoverflow.com/questions/2675133/c-sharp-ignore-certificate-errors)

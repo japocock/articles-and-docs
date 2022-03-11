@@ -20,6 +20,17 @@ Get S3 objects from a given bucket with a given storage class.
 Get-S3Object -BucketName <bucketname> -ProfileName <ProfileName> -Region <Region>  | Where-Object {$_.StorageClass -eq "GLACIER"}
 ```
 
+
+STS Assume Role
+
+```sh
+Set-AWSCredentials -AccessKey XXXXXXXXXXXXXXXXX -SecretKey XXXXXXXXXXXXXXXXXXXXXXXXXXX -StoreAs mycredential
+
+Initialize-AWSDefaults -ProfileName mycredential -Region eu-west-2
+
+$Creds = (Use-STSRole -RoleArn "arn:aws:iam::etcetc" -RoleSessionName "mysessionname").Credentials
+```
+
 #### PowerShell Converters
 
 [Registry to PowerShell converter](https://reg2ps.azurewebsites.net/)
@@ -65,4 +76,59 @@ Export Features and roles to XML
 
 ```sh
 Get-WindowsFeature | Where-Object {$_.name -Like "*Web*"} | Where Installed | Export-Clixml C:\TEMP\InstalledRoles.xml
+```
+
+Azure Active Directory (Azure AD)
+
+```sh
+function Get-DsRegStatus {
+    $dsregcmd = dsregcmd /status
+    $o = New-Object -TypeName PSObject
+    $dsregcmd | Select-String -Pattern " *[A-z]+ : [A-z]+ *" | ForEach-Object {
+              Add-Member -InputObject $o -MemberType NoteProperty -Name (([String]$_).Trim() -split " : ")[0] -Value (([String]$_).Trim() -split " : ")[1]
+         }
+    return $o
+} 
+```
+
+#### DSC
+
+[Idempotency For Dummies](https://medium.com/@ahmadfarag/idempotency-764f7bb6e4e2)
+
+[Credentials Options in Configuration Data](https://docs.microsoft.com/en-us/powershell/dsc/configurations/configdatacredentials)
+
+[Documentation](https://docs.microsoft.com/en-us/powershell/dsc/overview/overview)
+
+#### Code
+
+Get resource syntax
+
+```sh
+Get-DscResource -Name <resourcename> -Syntax
+
+PS C:\Users\administrator.BlueBuffalo> Get-DscResource | Select Name
+
+<resourcename>                   
+----                     
+File                     
+Archive                  
+Environment              
+Group                    
+GroupSet                 
+Log                      
+Package                  
+ProcessSet               
+Registry                 
+Script                   
+Service                  
+ServiceSet               
+User                     
+WaitForAll               
+WaitForAny               
+WaitForSome              
+WindowsFeature           
+WindowsFeatureSet        
+WindowsOptionalFeature   
+WindowsOptionalFeatureSet
+WindowsProcess           
 ```
